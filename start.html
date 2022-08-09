@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            background-color: lightgreen;
+        }
+    
+        input.belangrijk:hover {
+            background-color: red;
+            font-size: 20px;
+        }  
+    </style>
+  </head>
+  <body>
+    <input id="textfield"><button onclick="welcome()">klik hier</button></input>
+    <div id="welcome">Welkom: </div>
+
+    <script>
+        function welcome() {
+          var inputName = document.getElementById("textfield").value;
+          console.log(inputName + " has been welcomed");
+          document.getElementById("welcome").innerHTML = `Welkom: ${inputName}`;
+        }
+    </script>    
+  </body>
+</html>
+
+
+
+
+
+
+
+
