@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // DOM Document Object Model  DOM manipulatie
+            // Java compileer OOP 1995 heel populair
+            // JavaScript HTML CSS Browser
+            function welkomHeten(){
+                console.log("hij doet het");
+                var hetwoord = document.getElementById("demijne").value;
+                console.log(hetwoord);
+                document.getElementById("deuitvoer").innerHTML = 
+                        `Welkom ${hetwoord} we zijn blij met je komst
+                        <br>
+                        Dit wil ik nog meer zeggen ${hetwoord}`;
+                if(hetwoord == "Felix"){
+                    console.log("ja klopt");
+                }else{
+                    console.log("nee klopt niet");
+                }
+                var getal = parseInt(hetwoord)
+                console.log(getal+getal);
+                var anderwoord = "friet";
+                for(var x =0; x < anderwoord.length ; x++){
+                    console.log(anderwoord[x]);
+                }
+
+            }
+        </script>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <input id="demijne"><button onclick="welkomHeten()">Klik hier</button><br>
+        <div id="deuitvoer">Welkom: </div>
+        <h1>We zijn met git begonnen</h1>
+        <p>Dit is de paragraaf er onder!</p>
+        <div>Dit vind ik wel leuk</div>
+        <h1>Ik moet wat</h1>
+        <h5>nog iets</h5>
+        <h6>nog meer</h6>
+    </body>
+</html>
