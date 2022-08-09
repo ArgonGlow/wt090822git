@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        input {
-            background-color: lightgreen;
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script>
+        // opdracht 2 - contains an E?
+        function containsE() {
+          const query = document.getElementById("contain").value;
+          for (let i = 0; i < query.length; i++) {
+            if (query[i] !== "e") {
+              continue;
+            }
+            alert("word contains the letter 'e'");
+          }
         }
-    
-        input.belangrijk:hover {
-            background-color: orange;
-            font-size: 20px;
-        }  
-    </style>
+
+        // opdracht 3+ - how many E's?
+        function countE() {
+          const query = document.getElementById("count").value;
+          const letter = document.getElementById("letter").value;
+          let counter = 0;
+          for (let i = 0; i < query.length; i++) {
+            if (query[i] === letter) {
+              counter += 1;
+            }
+          }
+          if (counter > 0) {
+            alert(`Input contains ${counter} ${letter}'s`);
+          }
+        }
+      </script>
   </head>
   <body>
-    <input id="textfield"><button onclick="welcome()">klik hier</button></input>
-    <div id="welcome">Welkom: </div>
+    <!-- opdracht 2 - contains an E? -->
+    <p>Does it contain an E?</p>
+    <input id="contain" type="text"><button onclick="containsE()" >submit</button>
 
-    <script>
-        function welcome() {
-          var inputName = document.getElementById("textfield").value;
-          console.log(inputName + " has been welcomed");
-          document.getElementById("welcome").innerHTML = `Welkom: ${inputName}`;
-        }
-    </script>    
+    <!-- opdracht 3+ - how many E's? -->
+    <p>How many E's?</p>
+    <input id="count" type="text"><input id="letter" type="text"><button onclick="countE()" >submit</button>
+
   </body>
 </html>
-
-
-
-
-
-
-
-
